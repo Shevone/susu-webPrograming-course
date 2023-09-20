@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование</title>
+</head>
+<body>
+<h3>Редактировать книгу</h3>
+<form method="POST">
+    <input type="hidden" name="id" value="{{.Id}}" />
+    <label>Название Книги</label><br>
+    <input type="text" name="name" value="{{.Name}}" /><br><br>
+    <label>Автор</label><br>
+    <input type="text" name="author" value="{{.Author}}" /><br><br>
+    <label>Цена</label><br>
+    <input type="number" name="price" value="{{.Price}}" /><br><br>
+    <label>Рейтинг</label><br>
+    <input type="number" name="rating" min="0" max="10" /><br><br>
+    <input type="submit" value="Send" />
+</form>
+</body>
+</html>
