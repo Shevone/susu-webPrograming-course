@@ -21,13 +21,13 @@
     <title>Products</title>
 </head>
 <body>
-<a href="/view/{{.RealPage}}?limit=3">3 элемента на страницу</a>
+<a href="/books/{{.RealPage}}?limit=3">3 элемента на страницу</a>
 <br>
-<a href="/view/{{.RealPage}}?limit=5">5 элемента на страницу</a>
+<a href="/books/{{.RealPage}}?limit=5">5 элемента на страницу</a>
 <br>
-<a href="/view/{{.RealPage}}?limit=7">7 элементов на страницу</a>
+<a href="/books/{{.RealPage}}?limit=7">7 элементов на страницу</a>
 <br>
-<a href="/create">Добавить книгу</a>
+<a href="/books/create">Добавить книгу</a>
 <br>
 <br>
 <table>
@@ -39,16 +39,16 @@
         <td>{{.Author}}</td>
         <td>{{.Price}}</td>
         <td>{{.Rating}}</td>
-        <td><a href="/edit/{{.Id}}">Изменить</a>
-            <a href="/delete/{{.Id}}">Удалить</a>
+        <td><a href="/books/edit/{{.Id}}">Изменить</a>
+            <a href="/books/delete/{{.Id}}">Удалить</a>
         </td>
     </tr>
     {{end}}
 </table>
 <div class="pagination">
-    <a href="/view/{{.PrevPage}}"><<  </a>
-    <a class="active" href="#">{{.CurPage}}</a>
-    <a href="/view/{{.NextPage}}">  >></a>
+    <a href="/books/{{.PrevPage}}"><<  </a>
+    <a class="active">{{.NextPage}}</a>
+    <a href="/books/{{.NextPage}}">  >></a>
 </div>
 
 </body>
